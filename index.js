@@ -217,7 +217,7 @@ export default class Drawer extends Component {
         break
       case 'displace':
         mainProps[this.props.side] = this._length
-        drawerProps[this.props.side] = -this.getDeviceLength() + this._length + this._offsetOpen
+        drawerProps[this.props.side] = Math.round(-this.getDeviceLength() + this._offsetOpen + this._length)
         break
     }
 
